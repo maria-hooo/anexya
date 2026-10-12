@@ -5,6 +5,10 @@ on:
     branches: [main, master]
   workflow_dispatch:
 
+defaults:
+  run:
+    working-directory: rfid-service
+
 jobs:
   build:
     runs-on: ubuntu-latest
