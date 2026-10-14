@@ -34,7 +34,7 @@ The project follows a layered architecture with controllers, services, and repos
 
 The API documentation can be accessed through:
 
-**AWS:** [Add your deployed Swagger UI URL]
+**AWS:** http://rfid-alb-1689557911.eu-central-1.elb.amazonaws.com/swagger-ui/index.html
 
 **Local:** http://localhost:8080/swagger-ui.html
 
