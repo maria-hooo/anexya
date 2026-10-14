@@ -19,8 +19,6 @@ A Java / Spring Boot microservice for managing RFID tags, built for the anexya c
 9. [Testing](#testing)
 10. [AWS Deployment](#aws-deployment)
 11. [Monitoring and Logging](#monitoring-and-logging)
-12. [Design Decisions](#design-decisions)
-13. [Requirements Status](#requirements-status)
 
 ---
 
@@ -236,20 +234,3 @@ docker push [account-id].dkr.ecr.[region].amazonaws.com/rfid-service:latest
 - **Health**: Spring Boot Actuator `/actuator/health` is used by the load balancer and ECS.
 - [**Alarms**: CloudWatch alarms on high CPU, unhealthy targets, and 5xx error rate.]
 
-## Design Decisions
-
-- **Layered architecture** keeps controllers thin and business logic testable.
-- **DTOs instead of exposing entities** decouple the API contract from the database schema.
-- **Environment-based configuration** means the same image runs locally and on AWS with no code changes, and no secrets are committed.
-- **PostgreSQL on RDS** provides managed backups, patching and high availability.
-- **ECS [Fargate]** removes the need to manage servers.
-- [Add any other choices, e.g. unique constraint on EPC, pagination, soft deletes.]
-
-## Requirements Status
-
-| # | Requirement                     | Status        |
-|---|---------------------------------|---------------|
-| 1 | [Requirement from the brief]    | [Done]        |
-| 2 | [Requirement from the brief]    | [Done]        |
-| 3 | [Requirement from the brief]    | [Partial]     |
-| 4 | [Requirement from the brief]    | [Not started] |
