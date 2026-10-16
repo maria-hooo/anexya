@@ -3,6 +3,8 @@ name: Build and push image
 on:
   push:
     branches: [main, master]
+    paths-ignore:
+      - '**.md'
   workflow_dispatch:
 
 defaults:
